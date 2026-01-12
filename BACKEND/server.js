@@ -6,8 +6,13 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
 app.use(express.json());
+app.use(cors({
+  origin: 'https://6964af04efd1410e93894489--incandescent-shortbread-d61594.netlify.app', // frontend URL
+  methods: ['GET', 'POST', 'DELETE'],
+  credentials: true
+}));
+
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
