@@ -63,7 +63,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu - Slide Down */}
-            <div className={`md:hidden  transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen  opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
                 <ul className='flex flex-col bg-white border-t border-gray-100'>
                     <li className='border-b border-gray-100'>
                         <a href='#Home' onClick={closeMenu} className='block px-6 py-4 hover:bg-gray-50 hover:text-green-700 transition-colors'>HOME</a>
