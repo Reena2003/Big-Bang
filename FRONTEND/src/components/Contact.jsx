@@ -44,6 +44,8 @@ const Contact = () => {
     });
 
     const data = await response.json();
+    console.log("Backend response:", data);
+
 
     if (data.success) {
       alert("Message sent successfully!");
