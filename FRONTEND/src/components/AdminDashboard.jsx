@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   // Fetch all enquiries
   const fetchEnquiries = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/enquiry");
+      const res = await fetch("https://big-bang-e6xk.onrender.com/api/enquiry");
       const data = await res.json();
 
       if (data.success) {
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
     if (!window.confirm("Are you sure you want to delete this enquiry?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/enquiry/${id}`, {
+      const res = await fetch(`https://big-bang-e6xk.onrender.com/api/enquiry/${id}`, {
         method: "DELETE"
       });
 
