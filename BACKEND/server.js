@@ -8,8 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'https://6964af04efd1410e93894489--incandescent-shortbread-d61594.netlify.app', // frontend URL
-  methods: ['GET', 'POST', 'DELETE'],
+  origin: true,
   credentials: true
 }));
 
